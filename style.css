@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+.app{
+    width: 100%;
+}
+.container{
+    width: 80%;
+    margin: 10px auto;
+}
+.nav_bar{
+    width: 100%;
+    background: #5858e6;
+    color: #fff;
+}
+.nav_bar ul{
+    list-style: none;
+}
+.nav_bar ul li{
+    display: inline-block;
+}
+.nav_bar ul li a{
+    display: block;
+    color:white;
+    margin: 3px 5px;
+    padding: 10px;
+}
+.nav_bar ul li a:hover{
+    color:black;
+    background: rgb(255 87 34);
+}
+
+
+
+
+.card{
+    width: 60%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    background: #e6e5e5;
+}
+.card-header{
+    padding: 10px;
+    background: #5858e6;
+    color: white;
+}
+.card-body{
+    padding:20px 10px;
+}
+
+
+.router-link-active{
+    background: rgb(255 87 34);
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Router</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="container">
+            <div class="nav_bar">
+                <ul>
+                    <li>
+                        <a href="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="contact">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="service">Service</a>
+                    </li>
+                    <li>
+                        <a href="about">About</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav_bar">
+                <ul>
+                    <li>
+                        <router-link to="home">Home</router-link>
+                    </li>
+                    <li>
+                        <router-link to="contact">Contact us</router-link>
+                    </li>
+                    <li>
+                        <router-link to="service">Service</router-link>
+                    </li>
+                    <li>
+                        <router-link to="about">About</router-link>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <router-view></router-view>
+    </div>
+    
+<script src="js/vue.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/vue-router.js"></script>
+
+<script>
+    const Home={
+        template:`
+        <div class="card">
+        <div class="card-header">
+            <h2>Home Page</h2>
+        </div>
+        <div class="card-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure omnis in iste quis velit delectus facilis nesciunt voluptatum sunt! Libero sit sed quibusdam quod fuga architecto, incidunt quo omnis.</p>
+        </div>
+        </div>
+        `
+    };
+    const Contact={
+        template:`
+        <div class="card">
+        <div class="card-header">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="card-body">
+            <p>Contact Contact Contact Contact Contact consectetur Contact elit. Contact iure omnis in iste quis velit delectus facilis nesciunt voluptatum sunt! Libero sit sed quibusdam quod fuga architecto, incidunt quo omnis.</p>
+        </div>
+        </div>
+        `
+    };
+    const Service={
+        template:`
+        <div>
+            <div class="card">
+            <div class="card-header">
+                <h2>Service Page</h2>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure omnis in iste quis velit delectus facilis nesciunt voluptatum sunt! Libero sit sed quibusdam quod fuga architecto, incidunt quo omnis.</p>
+            </div>
+            </div>
+            <div class="card">
+            <div class="card-header">
+                <h2>Service Page</h2>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure omnis in iste quis velit delectus facilis nesciunt voluptatum sunt! Libero sit sed quibusdam quod fuga architecto, incidunt quo omnis.</p>
+            </div>
+            </div>
+        </div>
+        `
+    };
+    const About={
+        template:`
+        <div class="card">
+        <div class="card-header">
+            <h2>About Page</h2>
+        </div>
+        <div class="card-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure omnis in iste quis velit delectus facilis nesciunt voluptatum sunt! Libero sit sed quibusdam quod fuga architecto, incidunt quo omnis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure omnis in iste quis velit delectus facilis nesciunt voluptatum sunt! Libero sit sed quibusdam quod fuga architecto, incidunt quo omnis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure omnis in iste quis velit delectus facilis nesciunt voluptatum sunt! Libero sit sed quibusdam quod fuga architecto, incidunt quo omnis.</p>
+        </div>
+        </div>
+        `
+    };
+
+    const routes=[
+        {path:'/', component:Home},
+        {path:'/home', component:Home},
+        {path:'/contact', component:Contact},
+        {path:'/service', component:Service},
+        {path:'/about', component:About},
+    ];
+    const router= new VueRouter({
+        routes,
+        mode: 'history',
+        base:'vue_router'
+    })
+    
+    const app=new Vue({
+        router
+    }).$mount('.app')
+
+</script>
+
+
+</body>
+</html>
